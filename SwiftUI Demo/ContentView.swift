@@ -10,7 +10,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        VStack {
+            
+            //Map
+            MapView().frame(height: 300).edgesIgnoringSafeArea(.top)
+            
+            //Image
+            CircleImage().offset(y : -130).padding(.bottom,-100)
+            
+            // Text Views
+            VStack(alignment: .leading) {
+                Text("Hello SwiftUI")
+                    .font(.title)
+                    .foregroundColor(Color.blue)
+                
+                HStack {
+                    Text("lets get this going")
+                        .font(.subheadline)
+                    Spacer()
+                    Text("there is no looking back")
+                        .font(.subheadline)
+                }
+            }.padding()
+            
+            
+            // Spacer
+             Spacer()
+        }
     }
 }
 
